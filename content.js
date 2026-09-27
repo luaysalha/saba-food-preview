@@ -1,4 +1,5 @@
 const SITE_FIELDS=[
+ ['site_logo','Webbplatsens logotyp (HTTPS)','header > a:first-child img','image'],
  ['hero_title','Huvudrubrik','.hero-copy h1'],['hero_text','Introduktion','.hero-copy p'],['hero_image','Huvudbild (HTTPS)','.landscape','image'],
  ['about_title','Om oss – rubrik','.company-body h2'],['about_text','Om oss – beskrivning','.company-body p'],['about_extra','Om oss – extra text','.company-body p:nth-of-type(2)'],
  ['delivery_title','Leverans – rubrik','.delivery-section h2'],['delivery_text','Leverans – beskrivning','.delivery-section p'],['delivery_terms','Leverans – villkor','.delivery-section p:nth-of-type(2)'],
