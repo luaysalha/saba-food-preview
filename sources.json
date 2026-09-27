@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SF-001",
+    "name": "Olex · Rökt nötmix",
+    "weight": "140 g",
+    "units": 24,
+    "category": "Olex",
+    "image": "images/olex.jpg",
+    "description": "Rostad mix av cashewnötter, mandlar och pistagenötter med rökig BBQ-smak.",
+    "source": "https://alkhierfood.com/product/olex-mixed-nuts-roasted-smoked-140g/"
+  },
+  {
+    "id": "SF-002",
+    "name": "Alfakhr · Syrlig nötmix",
+    "weight": "500 g",
+    "units": 6,
+    "category": "Alfakhr",
+    "image": "images/alfakhr-500.jpg",
+    "description": "Rostade cashewnötter, mandlar och pistagenötter med syrlig smak i en återförslutningsbar hink.",
+    "source": "https://alkhierfood.com/product/alfakhr-mixed-nuts-roasted-sour-500g-bucket/"
+  },
+  {
+    "id": "SF-003",
+    "name": "Alfakhr · Nötmix med citron",
+    "weight": "900 g",
+    "units": 6,
+    "category": "Alfakhr",
+    "image": "images/alfakhr-900.jpg",
+    "description": "Rostad mix av cashewnötter, mandlar och pistagenötter med citronsmak i en återförslutningsbar hink.",
+    "source": "https://alkhierfood.com/product/alfakhr-mixed-nuts-roasted-sour-900g-bucket/"
+  }
+]
