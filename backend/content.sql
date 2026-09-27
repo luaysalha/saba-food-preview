@@ -1,0 +1,10 @@
+create table public.site_content(key text primary key check(key in ('settings','suppliers')),value jsonb not null check(jsonb_typeof(value)='object' and length(value::text)<100000),updated_at timestamptz not null default now());
+alter table public.site_content enable row level security;
+grant select on public.site_content to anon,authenticated;
+grant insert,update on public.site_content to authenticated;
+create policy content_read on public.site_content for select using(true);
+create policy content_insert on public.site_content for insert to authenticated with check(exists(select 1 from public.catalog_editors where user_id=auth.uid()));
+create policy content_update on public.site_content for update to authenticated using(exists(select 1 from public.catalog_editors where user_id=auth.uid())) with check(exists(select 1 from public.catalog_editors where user_id=auth.uid()));
+create function public.touch_site_content() returns trigger language plpgsql set search_path=public as $$begin new.updated_at=clock_timestamp();return new;end$$;
+create trigger touch_content before update on public.site_content for each row execute function public.touch_site_content();
+insert into public.site_content(key,value) values('settings','{}'),('suppliers','{"items":[{"id":"alkhier","name":"Alkhier Food","description":"Upptäck Alkhier Foods sortiment. Hos oss hittar du bland annat nötter från Olex och Alfakhr.","image":"https://luaysalha.github.io/saba-food-preview/images/alkhier-logo.png","link":"https://alkhierfood.com/","position":0,"published":true}]}');
